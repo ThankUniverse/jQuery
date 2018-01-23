@@ -42,13 +42,17 @@
 		<script>
 			$(document).ready(function(){
 				/* agrandir la police de caractères (120%) */
-				
-				
+				$("#instructions").click(function(agrandirPolice120) {
+				$("#contenu").css("font-size", "120%");
+				});
 				/* diminuer la police de caractères (80%) */
-		
-				
+				$("#instructions").click(function(diminuerPolice80) {
+				$("#contenu").css("font-size", "80%");
+				});
 				/* mettre en gras ou remettre en normal les mots en vert */
-
+				$("#instructions").click(function(BoldState) {
+				$(".vert").css("font-style", "bold");
+				});
 				
 				/* souligner ou remettre en normal les mots en rouge */
 			

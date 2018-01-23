@@ -16,7 +16,30 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
+  //Changement de couleur au passage VERT//
+  $("#green").mouseenter(function(mouseenter) {
+    $("#texte").css("color", "green");
+  });
+    $("#green").mouseleave(function(mouseleave) {
+    $("#texte").css("color", "black");
+  });
 
+  //Changement de couleur au passage ROUGE//
+  $("#red").mouseenter(function(mouseenter) {
+    $("#texte").css("color", "red");
+  });
+    $("#red").mouseleave(function(mouseleave) {
+    $("#texte").css("color", "black");
+  });
+  //Changement de couleur au passage BLEU//
+  $("#blue").mouseenter(function(mouseenter) {
+    $("#texte").css("color", "blue");
+  });
+    $("#blue").mouseleave(function(mouseleave) {
+    $("#texte").css("color", "black");
+  });
+
+  
 </script>
 </body>
 </html>
