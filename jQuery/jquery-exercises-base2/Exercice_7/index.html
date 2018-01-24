@@ -11,6 +11,9 @@
 			<img src="jquery-logo.png" />
 			<h2>Qu'est-ce-que jQuery ?</h2>
 			<p>jQuery est une bibliothèque <span class="rouge">JavaScript</span> libre et multi-plateforme créée pour faciliter l'écriture de <a href="https://fr.wikipedia.org/wiki/Client_Side_Scripting">scripts côté client</a> dans le code <span class="vert">HTML</span> des pages web.</p>
+			<div class="tooltip">
+  			<span class="tooltiptext">https://fr.wikipedia.org/wiki/Client_Side_Scripting</span> 
+			</div>
 			<p>La première version est lancée en janvier 2006 par <a href="https://fr.wikipedia.org/wiki/John_Resig">John Resig</a>.</p>
 			<h2>Que peut-on faire avec jQuery ?</h2>
 			<p>La bibliothèque contient notamment les fonctionnalités suivantes :</p>
@@ -42,28 +45,36 @@
 		<script>
 			$(document).ready(function(){
 				/* agrandir la police de caractères (120%) */
-				$("#instructions").click(function(agrandirPolice120) {
+				$("#instructions :nth-child(1)").click(function(agrandirPolice120) {
 				$("#contenu").css("font-size", "120%");
 				});
 				/* diminuer la police de caractères (80%) */
-				$("#instructions").click(function(diminuerPolice80) {
+				$("#instructions :nth-child(2)").click(function(diminuerPolice80) {
 				$("#contenu").css("font-size", "80%");
 				});
 				/* mettre en gras ou remettre en normal les mots en vert */
-				$("#instructions").click(function(BoldState) {
+				$("#instructions :nth-child(3)").click(function(BoldState) {
 				$(".vert").css("font-weight", "Bold");
 				});
-				$("#instructions").dblclick(function(BoldState) {
+				$("#instructions :nth-child(3)").dblclick(function(BoldState) {
 				$(".vert").css("font-weight", "Regular");
 				});
 				/* souligner ou remettre en normal les mots en rouge */
-				$
-				
+				$("#instructions:nth-child(4)").click(function(Souligné) {
+				$(".rouge").css("text-decoration", "underline");
+				});
+
+				$("#instructions:nth-child(4)").dblclick(function(Souligné) {
+				$(".rouge").css("text-decoration", "underline");
+				});
 				/* remplacer le logo par une autre image au survol */
-				
-				
+				$("img").hover(function(ImageChange) {
+				$(this).attr("src", "koala.jpg");
+				});
 				/* Afficher l'URL des liens dans une infobulle lors du survol des liens */
-				
+				$("a").hover (function(URLShow) {
+				$(".tooltiptext").href("link");
+			    });
 				/* ajouter "Chapitre 1 :" devant le 1er titre h2<br>et "Chapitre 2 :" devant le 2ème titre h2 */
 				
 			});
